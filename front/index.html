@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <style>
+            body{
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body class="center">
+        <form id="loginForm">
+            <h3>logowanie</h3>
+            <input type="text" id="login" placeholder="login"/><br/>
+            <input type="password" id="password" placeholder="hasło"/><br/>
+            <button type="button" id="loginButton">zaloguj się</button>
+            <h3>rejestracja</h3>
+            <input type="text" id="loginReg" placeholder="login"/><br/>
+            <input type="password" id="passwordReg" placeholder="hasło"/><br/>
+            <button type="button" id="registerButton">zarejestruj się</button>
+        </form>
+        <button id="cartButton" style="display: none;">koszyk</button>
+        <div style="display: none" id="restaurantList">
+            <button id="loadRestaurantsButton">wczytaj restauracje</button>
+        </div>
+        <div style="display: none" id="cart">
+            <div class="list">KOSZYK</div>
+            <button id="buy">zaplac</button>
+        </div>
+    </body>
+    <script src="script.js"></script>
+</html>
