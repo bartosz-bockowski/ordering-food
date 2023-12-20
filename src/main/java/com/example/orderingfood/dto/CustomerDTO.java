@@ -1,11 +1,9 @@
 package com.example.orderingfood.dto;
 
-import lombok.Getter;
-import lombok.Setter;
-import lombok.ToString;
+import lombok.Data;
+import lombok.EqualsAndHashCode;
 
-@Getter
-@Setter
-@ToString
+@EqualsAndHashCode(callSuper = true)
+@Data
 public class CustomerDTO extends UserDTO {
 }

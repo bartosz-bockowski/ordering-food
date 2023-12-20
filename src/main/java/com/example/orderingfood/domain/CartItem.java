@@ -5,6 +5,7 @@ import lombok.Setter;
 import lombok.ToString;
 
 import javax.persistence.*;
+import javax.validation.constraints.Min;
 
 @Entity
 @Getter
@@ -20,6 +21,7 @@ public class CartItem {
     @ToString.Exclude
     private Meal meal;
 
+    @Min(value = 1, message = "quantity cannot be lower than 1")
     private int quantity;
 
 }

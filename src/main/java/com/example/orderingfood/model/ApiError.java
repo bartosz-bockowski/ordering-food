@@ -1,17 +1,15 @@
 package com.example.orderingfood.model;
 
 import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.Data;
 import org.springframework.http.HttpStatus;
 
-@Getter
-@Setter
+@Data
 @AllArgsConstructor
 public class ApiError {
 
     private String message;
 
     private HttpStatus status;
-    
+
 }

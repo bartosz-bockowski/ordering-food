@@ -1,16 +1,16 @@
 package com.example.orderingfood.command;
 
-import lombok.Getter;
-import lombok.Setter;
-import lombok.ToString;
+import lombok.Data;
 
-@Getter
-@Setter
-@ToString
+import javax.validation.constraints.NotEmpty;
+
+@Data
 public class UserCommand {
 
+    @NotEmpty(message = "username cannot be empty")
     private String username;
 
+    @NotEmpty(message = "password cannot be empty")
     private String password;
-    
+
 }

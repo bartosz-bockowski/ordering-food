@@ -5,6 +5,8 @@ import lombok.Setter;
 import lombok.ToString;
 
 import javax.persistence.*;
+import javax.validation.constraints.DecimalMin;
+import javax.validation.constraints.NotEmpty;
 import java.math.BigDecimal;
 
 @Entity
@@ -17,8 +19,10 @@ public class Meal {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @NotEmpty(message = "name cannot be empty")
     private String name;
 
+    @DecimalMin(value = "0", message = "price cannot be negative")
     private BigDecimal price;
 
     @ToString.Exclude

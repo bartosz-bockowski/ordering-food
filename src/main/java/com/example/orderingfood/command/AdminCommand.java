@@ -1,9 +1,9 @@
 package com.example.orderingfood.command;
 
-import lombok.Getter;
-import lombok.Setter;
+import lombok.Data;
+import lombok.EqualsAndHashCode;
 
-@Getter
-@Setter
+@EqualsAndHashCode(callSuper = true)
+@Data
 public class AdminCommand extends UserCommand {
 }

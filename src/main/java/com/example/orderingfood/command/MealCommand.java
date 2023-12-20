@@ -1,18 +1,18 @@
 package com.example.orderingfood.command;
 
-import lombok.Getter;
-import lombok.Setter;
-import lombok.ToString;
+import lombok.Data;
 
+import javax.validation.constraints.DecimalMin;
+import javax.validation.constraints.NotEmpty;
 import java.math.BigDecimal;
 
-@Getter
-@Setter
-@ToString
+@Data
 public class MealCommand {
 
+    @NotEmpty(message = "meal name cannot be empty")
     private String name;
 
+    @DecimalMin(value = "0", message = "price cannot be negative")
     private BigDecimal price;
 
 }

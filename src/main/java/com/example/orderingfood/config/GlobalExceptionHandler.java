@@ -12,12 +12,12 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
 public class GlobalExceptionHandler {
 
     @ExceptionHandler(WrongLoginCredentialsException.class)
-    public ResponseEntity<ApiError> handleWrongLoginCredentialsException(Exception e) {
+    public ResponseEntity<ApiError> handleWrongLoginCredentialsException(RuntimeException e) {
         return new ResponseEntity<>(new ApiError(e.getMessage(), HttpStatus.BAD_REQUEST), HttpStatus.BAD_REQUEST);
     }
 
     @ExceptionHandler(NotFoundException.class)
-    public ResponseEntity<ApiError> handleNotFoundException(Exception e) {
+    public ResponseEntity<ApiError> handleNotFoundException(RuntimeException e) {
         return new ResponseEntity<>(new ApiError(e.getMessage(), HttpStatus.NOT_FOUND), HttpStatus.NOT_FOUND);
     }
 

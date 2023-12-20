@@ -1,18 +1,17 @@
 package com.example.orderingfood.command;
 
-import lombok.Getter;
-import lombok.Setter;
-import lombok.ToString;
+import lombok.Data;
 
+import javax.validation.constraints.NotEmpty;
 import java.util.List;
 
-@Getter
-@Setter
-@ToString
+@Data
 public class RestaurantCommand {
 
+    @NotEmpty(message = "name cannot be empty")
     private String name;
 
+    @NotEmpty(message = "entered restaurant must have at least one meal")
     private List<MealCommand> meals;
-    
+
 }
